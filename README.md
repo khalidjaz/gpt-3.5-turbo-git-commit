@@ -10,3 +10,11 @@ gpt-3.5-turbo-git-commit is a simple and effective tool that leverages the power
 - Leverages the power of OpenAI's ChatGPT
 - Integrates seamlessly with your Git workflow
 - Easy to set up and use
+
+Usage
+-----
+1. Install the package
+```
+cp .git.example/hooks/prepare-commit-msg .git/hooks/prepare-commit-msg
+chmod +x .git/hooks/prepare-commit-msg
+```
