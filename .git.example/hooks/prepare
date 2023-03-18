@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Get the latest code changes
+latest_changes=$(git diff HEAD)
+
+# Set the environment variable with your OPEN API key
+export GPT_API_KEY='sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+# Call the GPT-4 script and generate the commit message
+commit_msg=$(python /hooks/commit.py "${latest_changes}")
+
+# Print the generated commit message for debugging
+echo "Generated commit message: ${commit_msg}"
+
+# Check if the commit message is empty or contains only whitespace characters
+if [[ -z "${commit_msg// }" ]]; then
+    echo "The generated commit message is empty. Aborting commit."
+    exit 1
+fi
+
+# Set the generated commit message as the default message for this commit
+echo "${commit_msg}" > "$1"
