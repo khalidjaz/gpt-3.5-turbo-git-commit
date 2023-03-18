@@ -17,10 +17,9 @@ Usage
 ```
 cp .git.example/hooks/prepare-commit-msg .git/hooks/prepare-commit-msg
 chmod +x .git/hooks/prepare-commit-msg
-echo "export OPENAI_API_KEY=<your_api_key>" >> ~/.bashrc
 ```
 
-2. Make some changes to your code
+2. Update your prepare-commit-msg with your API key
 3. Commit your changes
 ```
 git commit -m "Blah blah blah"
