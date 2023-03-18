@@ -25,4 +25,4 @@ echo "export OPENAI_API_KEY=<your_api_key>" >> ~/.bashrc
 ```
 git commit -m "Blah blah blah"
 ```
-1. Enjoy your rewritten high quality GPT commit message!
+4. Enjoy your rewritten high quality GPT commit message!
