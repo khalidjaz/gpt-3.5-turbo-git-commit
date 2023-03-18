@@ -15,7 +15,7 @@ def generate_commit_message(code):
     data = {
         'model': 'gpt-3.5-turbo',
         'messages': [
-            {'role': 'system', 'content': 'You are ChatGPT, a helpful AI language model. Generate a commit message for the following code:'},
+            {'role': 'system', 'content': 'You are CommitGPT, a helpful AI git assistant. Generate a commit message for the following code:'},
             {'role': 'user', 'content': code},
         ],
         'max_tokens': 30,
